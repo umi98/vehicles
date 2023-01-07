@@ -22,7 +22,7 @@ If you encounter error, try running `composer update` to update the package.
 
 Postman is used to test the HTTP Request so please make sure to install this application. The Postman collection can be found in folder "Postman". New collections might be added so please check and use the latest version.
 Import the collection to Postman and try running it.
-Database can be found in folder "Database". Please import the database before running the project. New files might be added, please check regularly and read the notice at Readme file for some updates.
+Database can be found in folder "DB". Please import the database before running the project. New files might be added, please check regularly and read the notice at Readme file for some updates.
 
 ## Activity Log
 - 2022-01-06

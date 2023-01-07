@@ -22,7 +22,9 @@ Route::group([
     'prefix' => 'vehicles',
 ], function(){
     Route::get('/', 'App\Http\Controllers\VehicleController@showAll');
-    Route::post('/store', 'App\Http\Controllers\VehicleController@store');
+    Route::get('/motor/', 'App\Http\Controllers\MotorController@getAll');
+    // Route::post('/store', 'App\Http\Controllers\VehicleController@store');
+    Route::post('/motor/store', 'App\Http\Controllers\MotorController@addMotor');
     Route::post('/update/{id}', 'App\Http\Controllers\VehicleController@update');
     Route::delete('/delete/{id}', 'App\Http\Controllers\VehicleController@delete');
     Route::get('/{id}', 'App\Http\Controllers\VehicleController@getById');

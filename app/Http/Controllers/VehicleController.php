@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class VehicleController extends Controller
 {
-    private VehicleService $vehicleServ;
+    public VehicleService $vehicleServ;
     
     public function __construct()
     {

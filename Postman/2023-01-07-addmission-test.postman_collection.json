@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "72e17b78-40c4-4c3d-b8d1-1e7b95b791e1",
+		"name": "addmission-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1442816"
+	},
+	"item": [
+		{
+			"name": "Vehicles",
+			"item": [
+				{
+					"name": "Vehicles List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Motor List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/motor",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"motor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new vehicle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "brand",
+									"value": "Vario 126 eSP",
+									"type": "text"
+								},
+								{
+									"key": "manufacturer",
+									"value": "Honda",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "20000000",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "Blue",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2021",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Motorcycle",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new motor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "brand",
+									"value": "Vario 126 eSP",
+									"type": "text"
+								},
+								{
+									"key": "manufacturer",
+									"value": "Honda",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "20000000",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "Blue",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2021",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Motorcycle",
+									"type": "text"
+								},
+								{
+									"key": "machine",
+									"value": "sdsda",
+									"type": "text"
+								},
+								{
+									"key": "suspension_front",
+									"value": "aAW",
+									"type": "text"
+								},
+								{
+									"key": "suspension_back",
+									"value": "asas",
+									"type": "text"
+								},
+								{
+									"key": "transmission",
+									"value": "rrrr",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/motor/store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"motor",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit vehicle Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "brand",
+									"value": "Vario 129",
+									"type": "text"
+								},
+								{
+									"key": "manufacturer",
+									"value": "Hondazz",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "110000000",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "Bluess",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2022",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Motorcycles",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/update/63b8d16e628ee2758e0a7642",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"update",
+								"63b8d16e628ee2758e0a7642"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail of vehicle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/63b8d16e628ee2758e0a7642",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"63b8d16e628ee2758e0a7642"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete vehicle",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/delete/63b903ec628ee2758e0a7643",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"delete",
+								"63b903ec628ee2758e0a7643"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
