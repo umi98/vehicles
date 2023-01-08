@@ -29,3 +29,5 @@ Database can be found in folder "DB". Please import the database before running 
     * Upload base projects
 - 2022-01-07
     * Simple CRUD for vehicle collection
+- 2022-01-08
+    * CRUD for Vehicle Collections (Car and Motor Sub) finished

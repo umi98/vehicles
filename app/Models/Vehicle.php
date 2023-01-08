@@ -21,6 +21,7 @@ class Vehicle extends Eloquent
         'color',
         'year',
         'qty',
-        'type'
+        'type',
+        'detail[]'
     ];
 }

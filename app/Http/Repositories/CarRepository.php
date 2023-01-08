@@ -4,7 +4,7 @@ namespace App\Http\Repositories;
 
 use App\Models\Vehicle;
 
-class MotorRepository
+class CarRepository
 {
 	/*
     *
@@ -13,24 +13,23 @@ class MotorRepository
     */
 	public function create($data)
 	{
-		$motor = New Vehicle();
+		$car = New Vehicle();
 		$detail = [
 			'machine' => $data['machine'],            
-            'suspension_front' => $data['suspension_front'],
-            'suspension_back' => $data['suspension_back'],
-            'transmission' => $data['transmission'],
+            'passanger_number' => $data['passanger_number'],
+            'type' => $data['type'],
 		];
 
-		$motor->brand = $data['brand'];
-		$motor->manufacturer = $data['manufacturer'];
-		$motor->price = $data['price'];
-		$motor->color = $data['color'];
-		$motor->year = $data['year'];
-		$motor->qty = $data['qty'];
-		$motor->type = $data['type'];
-		$motor->detail = $detail;
+		$car->brand = $data['brand'];
+		$car->manufacturer = $data['manufacturer'];
+		$car->price = $data['price'];
+		$car->color = $data['color'];
+		$car->year = $data['year'];
+		$car->qty = $data['qty'];
+		$car->type = $data['type'];
+		$car->detail = $detail;
 
-		$motor->save();
+		$car->save();
 
 		$entry = Vehicle::latest('_id')->first();
 		return $entry;
@@ -47,9 +46,8 @@ class MotorRepository
 
 		$detail = [
 			'machine' => $data['machine'],            
-            'suspension_front' => $data['suspension_front'],
-            'suspension_back' => $data['suspension_back'],
-            'transmission' => $data['transmission'],
+            'passanger_number' => $data['passanger_number'],
+            'style' => $data['style'],
 		];
 
 		$vehicle->brand = $data['brand'];

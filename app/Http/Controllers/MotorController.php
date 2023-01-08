@@ -12,50 +12,90 @@ class MotorController extends Controller
     private MotorService $motorServ;
     private VehicleController $vehicleController;
     
+    /*
+    *
+    * Initiate variables
+    *
+    */
     public function __construct()
     {
         $this->motorServ = new MotorService;
         $this->vehicleController = new VehicleController;
     }
 
-    //
-    public function getAll()
+    /*
+    *
+    * Get all motors
+    *
+    */
+    public function getMotor()
     {
-        $motors = $this->motorServ->getMotor();
-        return $this->vehicleController->responseMessage(true, "List of Motors", $motors, 200);
+        return $this->vehicleController->getByType('motorcycle');
     }
 
+    /*
+    *
+    * Get details of record based on id
+    *
+    */
+    public function getById($id)
+    {
+        return $this->vehicleController->getById($id);
+    }
+
+    /*
+    *
+    * Delete record
+    *
+    */
+    public function delete($id)
+    {
+        return $this->vehicleController->delete($id);
+    }
+
+    /*
+    *
+    * Add record
+    *
+    */
     public function addMotor(Request $request)
     {
-        $parentData = [
-            'brand' => $request['brand'],
-            'manufacturer' => $request['manufacturer'],
-            'price' => $request['price'],
-            'color' => $request['color'],
-            'year' => $request['year'],
-            'qty' => $request['qty'],
-            'type' => $request['type'],
-        ];        
-
-        $newData = new Request($parentData);
-        
-        $motorData = [
-            'machine' => $request['machine'],
-            'suspension_front' => $request['suspension_front'],
-            'suspension_back' => $request['suspension_back'],
-            'transmission' => $request['transmission'],
-        ];
-        
+        $req = (array) $request->all();
         try {
             $condition = true;
             $statusCode = 200;
             $message = "Successfully add data";
-            $this->vehicleController->store($newData);
-            $data = $this->motorServ->addMotor($motorData);
+            $data = $this->motorServ->addMotor($req);
         } catch (Exception $e) {
             $condition = false;
             $statusCode = 400;
             $message = "Failed to add data";
+            $data = json_decode($e->getMessage());
+        }
+
+        return $this->vehicleController->responseMessage($condition, $message, $data, $statusCode);
+    }
+
+    /*
+    *
+    * Update record
+    *
+    */
+    public function update(Request $request, $id)
+    {
+        $this->vehicleController->checkAvailable($id);
+
+        $req = (array) $request->all();
+
+        try {
+            $condition = true;
+            $statusCode = 200;
+            $message = "Successfully edit data";
+            $data = $this->motorServ->editMotor($req, $id);
+        } catch (Exception $e) {
+            $condition = false;
+            $statusCode = 400;
+            $message = "Failed to edit data";
             $data = json_decode($e->getMessage());
         }
 

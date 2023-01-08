@@ -2,13 +2,13 @@
 
 namespace App\Http\Services;
 
-use App\Http\Repositories\MotorRepository;
+use App\Http\Repositories\CarRepository;
 use Illuminate\Support\Facades\Validator;
 use InvalidArgumentException;
 
-class MotorService
+class CarService
 {
-    private MotorRepository $motorRepo;
+    private CarRepository $carRepo;
 
     /*
     *
@@ -17,7 +17,7 @@ class MotorService
     */
     public function __construct()
     {
-        $this->motorRepo = new MotorRepository;
+        $this->carRepo = new CarRepository;
     }
 
     /*
@@ -25,7 +25,7 @@ class MotorService
     * Add record
     *
     */
-    public function addMotor($request)
+    public function addCar($request)
     {
         $validator = Validator::make($request, [
             'brand' => 'required',            
@@ -36,9 +36,8 @@ class MotorService
             'qty' => 'required',
             'type' => 'required',
             'machine' => 'required',            
-            'suspension_front' => 'required',
-            'suspension_back' => 'required',
-            'transmission' => 'required',
+            'passanger_number' => 'required',
+            'type' => 'required',
         ]);
 
         if ($validator->fails())
@@ -46,7 +45,7 @@ class MotorService
             throw new InvalidArgumentException($validator->errors());
         }
 
-        $result = $this->motorRepo->create($request);
+        $result = $this->carRepo->create($request);
         return $result;
     }
 
@@ -55,7 +54,7 @@ class MotorService
     * Edit record
     *
     */
-    public function editMotor($request, $id)
+    public function editCar($request, $id)
     {
         $validator = Validator::make($request, [
             'brand' => 'required',            
@@ -66,9 +65,8 @@ class MotorService
             'qty' => 'required',
             'type' => 'required',
             'machine' => 'required',            
-            'suspension_front' => 'required',
-            'suspension_back' => 'required',
-            'transmission' => 'required',
+            'passanger_number' => 'required',
+            'style' => 'required',
         ]);
         
         if ($validator->fails())
@@ -77,7 +75,7 @@ class MotorService
         }
 
         $request['_id'] = $id;
-        $data = $this->motorRepo->edit($request);
+        $data = $this->carRepo->edit($request);
 
         return $data;
     }

@@ -2,20 +2,28 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Vehicle;
 use App\Http\Services\VehicleService;
-use Exception;
 use Illuminate\Http\Request;
 
 class VehicleController extends Controller
 {
     public VehicleService $vehicleServ;
-    
+
+    /*
+    *
+    * Initiate variables
+    *
+    */
     public function __construct()
     {
         $this->vehicleServ = new VehicleService;
     }
     
+    /*
+    *
+    * Response message
+    *
+    */
     public function responseMessage($status, $message, $data, $statusCode)
     {
         return response()->json([
@@ -25,74 +33,86 @@ class VehicleController extends Controller
         ], $statusCode);
     }
     
-    //
+    /*
+    *
+    * Show all vehicles regardless the type
+    *
+    */
     public function showAll()
     {
         $vehicle = $this->vehicleServ->getVehicle();
-
         return $this->responseMessage(true, 'List of Vehicles', $vehicle, 200);
     }
 
+    /*
+    *
+    * Show vehicles based on type
+    *
+    */
+    public function getByType($type)
+    {
+        $vehicle = $this->vehicleServ->getByType($type);
+        return $this->responseMessage(true, 'List of '.$type, $vehicle, 200);
+    }
+
+    /*
+    *
+    * Get details from given id
+    *
+    */
     public function getById($id)
     {
         $vehicle = $this->vehicleServ->getById($id);
         return $this->responseMessage(true, 'Detail of '.$id, $vehicle, 200);
     }
 
-    public function store(Request $request)
-    {
-        $req = (array) $request->all();
-        try {
-            $condition = true;
-            $statusCode = 200;
-            $message = "Successfully add data";
-            $data = $this->vehicleServ->addVehicle($req);
-        } catch (Exception $e) {
-            $condition = false;
-            $statusCode = 400;
-            $message = "Failed to add data";
-            $data = json_decode($e->getMessage());
-        }
-
-        return $this->responseMessage($condition, $message, $data, $statusCode);
-    }
-
-    public function update(Request $request, $id)
+    /*
+    *
+    * Check if given id exists
+    *
+    */
+    public function checkAvailable($id)
     {
         $vehicle = $this->vehicleServ->getById($id);
-
         if (!$vehicle)
         {
             return $this->responseMessage(false, 'Data not found', null, 200);
         }
-
-        $req = (array) $request->all();
-
-        try {
-            $condition = true;
-            $statusCode = 200;
-            $message = "Successfully edit data";
-            $data = $this->vehicleServ->editVehicle($req, $id);
-        } catch (Exception $e) {
-            $condition = false;
-            $statusCode = 400;
-            $message = "Failed to edit data";
-            $data = json_decode($e->getMessage());
-        }
-
-        return $this->responseMessage($condition, $message, $data, $statusCode);
     }
 
+    /*
+    *
+    * Delete record
+    *
+    */
     public function delete($id)
     {
-        $vehicle = $this->vehicleServ->getById($id);
-
-        if (!$vehicle)
-        {
-            return $this->responseMessage(false, 'Data not found', null, 200);
-        }
-
+        $this->checkAvailable($id);
         $this->vehicleServ->delete($id);
         return $this->responseMessage(true, 'Data of '.$id.' is deleted', null, 200);
     }
+
+    /*
+    *
+    * Add record
+    * This section was emptied since each type of vehicles had their own input
+    * Add and edit record code are written in Motor Class and Car Class
+    *
+    */
+    public function store(Request $request)
+    {
+    }
+
+    /*
+    *
+    * Add record
+    * This section was emptied since each type of vehicles had their own input
+    * Add and edit record code are written in Motor Class and Car Class
+    *
+    */
+    public function update(Request $request, $id)
+    {
+    }
+
+
 }

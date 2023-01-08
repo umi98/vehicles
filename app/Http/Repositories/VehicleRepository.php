@@ -6,6 +6,11 @@ use App\Models\Vehicle;
 
 class VehicleRepository
 {
+	/*
+    *
+    * Get all records without filltering
+    *
+    */
 	public function getAll()
 	{
 		$vehicle = Vehicle::query()
@@ -13,52 +18,63 @@ class VehicleRepository
 		return $vehicle;
 	}
 
-	public function create($data)
+	/*
+    *
+    * Get all records with filtering on type attribute
+    *
+    */
+	public function getByType($data)
 	{
-		$vehicle = New Vehicle();
-
-		$vehicle->brand = $data['brand'];
-		$vehicle->manufacturer = $data['manufacturer'];
-		$vehicle->price = $data['price'];
-		$vehicle->color = $data['color'];
-		$vehicle->year = $data['year'];
-		$vehicle->qty = $data['qty'];
-		$vehicle->type = $data['type'];
-
-		$vehicle->save();
-
-		$entry = Vehicle::latest('_id')->first();
-		return $entry;
+		$vehicle = Vehicle::query()
+				-> where('type', '=', $data)
+				-> get();
+		return $vehicle;
 	}
 
-	public function edit($data)
-	{
-		$vehicle = $this->getById($data['_id']);
-
-		$vehicle->brand = $data['brand'];
-		$vehicle->manufacturer = $data['manufacturer'];
-		$vehicle->price = $data['price'];
-		$vehicle->color = $data['color'];
-		$vehicle->year = $data['year'];
-		$vehicle->qty = $data['qty'];
-		$vehicle->type = $data['type'];
-
-		$vehicle->save();
-
-		$entry = $this->getById($data['_id']);
-		return $entry;
-	}
-
+		/*
+    *
+    * Get record from id
+    *
+    */
 	public function getById($id)
 	{
 		$vehicle = Vehicle::find($id);
 		return $vehicle;
 	}
 
+	/*
+    *
+    * Delete record from id
+    *
+    */
 	public function delete($id)
 	{
 		$vehicle = Vehicle::find($id);
 		$vehicle->delete();
 		return $id;
 	}
+	
+	/*
+    *
+    * Add record
+    * This section was emptied since each type of vehicles had their own input
+	* Add and edit record code are written in Motor Class and Car Class
+    *
+    */
+	public function create($data)
+	{
+	}
+
+	/*
+    *
+    * Edit record
+    * This section was emptied since each type of vehicles had their own input
+	* Add and edit record code are written in Motor Class and Car Class
+    *
+    */
+	public function edit($data)
+	{
+	}
+
+
 }
