@@ -2,7 +2,8 @@
 
 This project is based on Laravel 8. This project is made for admission test on Inosoft Transistem. The expected results for this project are as stated below:
 - Show available vehicles
-- The selling summary
+- Vehicles sales
+- The selling summary for each type
 
 ## What to prepare
 
@@ -31,3 +32,4 @@ Database can be found in folder "DB". Please import the database before running 
     * Simple CRUD for vehicle collection
 - 2022-01-08
     * CRUD for Vehicle Collections (Car and Motor Sub) finished
+    * CRUD for Selling Collections finished

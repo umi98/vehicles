@@ -40,7 +40,19 @@ Route::group([
         Route::delete('/delete/{id}', 'App\Http\Controllers\CarController@delete');
     });
     Route::get('/', 'App\Http\Controllers\VehicleController@showAll');
-    Route::post('/update/{id}', 'App\Http\Controllers\VehicleController@update');
     Route::delete('/delete/{id}', 'App\Http\Controllers\VehicleController@delete');
     Route::get('/{id}', 'App\Http\Controllers\VehicleController@getById');
+});
+
+Route::group([
+    'prefix' => 'selling',
+], function(){
+    Route::get('/', 'App\Http\Controllers\SellingController@showAll');
+    Route::get('/motor', 'App\Http\Controllers\SellingController@getByMotor');
+    Route::get('/car', 'App\Http\Controllers\SellingController@getByCar');
+    Route::get('/available','App\Http\Controllers\SellingController@getStock');
+    Route::post('/store', 'App\Http\Controllers\SellingController@store');
+    Route::post('/edit/{id}', 'App\Http\Controllers\SellingController@update');
+    Route::delete('/delete/{id}', 'App\Http\Controllers\SellingController@delete');
+    Route::get('/{id}', 'App\Http\Controllers\SellingController@getById');
 });

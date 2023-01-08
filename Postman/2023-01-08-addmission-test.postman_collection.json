@@ -1,0 +1,901 @@
+{
+	"info": {
+		"_postman_id": "72e17b78-40c4-4c3d-b8d1-1e7b95b791e1",
+		"name": "addmission-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1442816"
+	},
+	"item": [
+		{
+			"name": "Vehicles",
+			"item": [
+				{
+					"name": "Vehicles List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Motor List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/motor",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"motor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Car List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/car",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"car"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new vehicle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "brand",
+									"value": "Vario 126 eSPana",
+									"type": "text"
+								},
+								{
+									"key": "manufacturer",
+									"value": "Honda",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "20000000",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "Blue",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2021",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Motorcycle",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new motor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "brand",
+									"value": "Vega ZR",
+									"type": "text"
+								},
+								{
+									"key": "manufacturer",
+									"value": "Yamaha",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "8000000",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "Blue",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2011",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "motorcycle",
+									"type": "text"
+								},
+								{
+									"key": "machine",
+									"value": "sdsda",
+									"type": "text"
+								},
+								{
+									"key": "suspension_front",
+									"value": "aAW",
+									"type": "text"
+								},
+								{
+									"key": "suspension_back",
+									"value": "asas",
+									"type": "text"
+								},
+								{
+									"key": "transmission",
+									"value": "rrrr",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/motor/store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"motor",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new car",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "brand",
+									"value": "Innova 127 VVT",
+									"type": "text"
+								},
+								{
+									"key": "manufacturer",
+									"value": "Toyota",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "80000000",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "Silver",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2015",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "car",
+									"type": "text"
+								},
+								{
+									"key": "machine",
+									"value": "sdsda",
+									"type": "text"
+								},
+								{
+									"key": "passanger_number",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "style",
+									"value": "Van",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/car/store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"car",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit motor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "brand",
+									"value": "Vario 129",
+									"type": "text"
+								},
+								{
+									"key": "manufacturer",
+									"value": "Hondazz",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "110000000",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "Bluess",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2022",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "motorcycle",
+									"type": "text"
+								},
+								{
+									"key": "machine",
+									"value": "sdsda",
+									"type": "text"
+								},
+								{
+									"key": "suspension_front",
+									"value": "aasaAW",
+									"type": "text"
+								},
+								{
+									"key": "suspension_back",
+									"value": "asasw2",
+									"type": "text"
+								},
+								{
+									"key": "transmission",
+									"value": "rrrr111",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/motor/update/63b92c21628ee2758e0a764d",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"motor",
+								"update",
+								"63b92c21628ee2758e0a764d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit car",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "brand",
+									"value": "Kijang Innova",
+									"type": "text"
+								},
+								{
+									"key": "manufacturer",
+									"value": "Toyota",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "396600000",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "Gray Metal",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2022",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "car",
+									"type": "text"
+								},
+								{
+									"key": "machine",
+									"value": "2.0L Petrol Engine, In-Line 4 Cylinder 16 Valve DOHC",
+									"type": "text"
+								},
+								{
+									"key": "passanger_number",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "style",
+									"value": "Van",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/car/update/63ba41b514e3a18aa6066663",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"car",
+								"update",
+								"63ba41b514e3a18aa6066663"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail of vehicle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/63b8d16e628ee2758e0a7642",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"63b8d16e628ee2758e0a7642"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail of motors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/motor/63b92c21628ee2758e0a764d",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"motor",
+								"63b92c21628ee2758e0a764d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail of car",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/car/63ba41b514e3a18aa6066663",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"car",
+								"63ba41b514e3a18aa6066663"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete vehicle",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/delete/63b903ec628ee2758e0a7643",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"delete",
+								"63b903ec628ee2758e0a7643"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete motor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/motor/delete/63b918e3628ee2758e0a764b",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"motor",
+								"delete",
+								"63b918e3628ee2758e0a764b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete car",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/car/delete/63ba41b514e3a18aa6066663",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"car",
+								"delete",
+								"63ba41b514e3a18aa6066663"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Selling",
+			"item": [
+				{
+					"name": "See available products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/selling/available",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"selling",
+								"available"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add selling",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "vehicle_id",
+									"value": "63ba348714e3a18aa6066662",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "payment_method",
+									"value": "Credit",
+									"type": "text"
+								},
+								{
+									"key": "tax",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "buyer_name",
+									"value": "Budi",
+									"type": "text"
+								},
+								{
+									"key": "buyer_address",
+									"value": "Pekerti",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/selling/store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"selling",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit selling",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "vehicle_id",
+									"value": "63b92c21628ee2758e0a764d",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "payment_method",
+									"value": "Cash",
+									"type": "text"
+								},
+								{
+									"key": "tax",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "buyer_name",
+									"value": "Alam",
+									"type": "text"
+								},
+								{
+									"key": "buyer_address",
+									"value": "Sutra",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/selling/edit/63ba6a9114e3a18aa6066665",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"selling",
+								"edit",
+								"63ba6a9114e3a18aa6066665"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "See all selling records",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/selling",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"selling"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "See detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/selling/63ba604f14e3a18aa6066664",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"selling",
+								"63ba604f14e3a18aa6066664"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete selling record",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/selling/delete/63ba604f14e3a18aa6066664",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"selling",
+								"delete",
+								"63ba604f14e3a18aa6066664"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "See selling record for motorcycle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/selling/motor",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"selling",
+								"motor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "See selling record for car",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/selling/car",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"selling",
+								"car"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

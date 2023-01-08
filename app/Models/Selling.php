@@ -15,9 +15,11 @@ class Selling extends Eloquent
     protected $primaryKey = "_id";
 
     protected $fillable = [
-        'date',
         'vehicle_id',
-        'color',
-        'qty'
+        'type',
+        'qty',
+        'payment_method',
+        'tax',
+        'buyer[]'
     ];
 }
