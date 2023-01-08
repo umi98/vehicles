@@ -1,0 +1,1236 @@
+{
+	"info": {
+		"_postman_id": "72e17b78-40c4-4c3d-b8d1-1e7b95b791e1",
+		"name": "addmission-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1442816"
+	},
+	"item": [
+		{
+			"name": "Vehicles",
+			"item": [
+				{
+					"name": "Vehicles List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NzMxODA3MTMsImV4cCI6MTY3MzE4NDMxMywibmJmIjoxNjczMTgwNzEzLCJqdGkiOiJTWXBpanhRUzlrcU9qRDU0Iiwic3ViIjoiNjNiYWEzNGNhNGUwZDllMzlmMDY0ODgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.E2eJUySyRlP2oarHerr9mbN7I-CzzmJ4kUfd_bEoItk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Motor List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NzMxODA3MTMsImV4cCI6MTY3MzE4NDMxMywibmJmIjoxNjczMTgwNzEzLCJqdGkiOiJTWXBpanhRUzlrcU9qRDU0Iiwic3ViIjoiNjNiYWEzNGNhNGUwZDllMzlmMDY0ODgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.E2eJUySyRlP2oarHerr9mbN7I-CzzmJ4kUfd_bEoItk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/motor",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"motor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Car List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NzMxNzcwNTMsImV4cCI6MTY3MzE4MDY1MywibmJmIjoxNjczMTc3MDUzLCJqdGkiOiJXczNUa0ttUWg0T0l0S0Y5Iiwic3ViIjoiNjNiYWEzNGNhNGUwZDllMzlmMDY0ODgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.k14BEFsq3D8bvPR4Yo7dZYUdZ3yQkjSuaNxMn-zcT2U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/car",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"car"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new motor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NzMxNzcwNTMsImV4cCI6MTY3MzE4MDY1MywibmJmIjoxNjczMTc3MDUzLCJqdGkiOiJXczNUa0ttUWg0T0l0S0Y5Iiwic3ViIjoiNjNiYWEzNGNhNGUwZDllMzlmMDY0ODgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.k14BEFsq3D8bvPR4Yo7dZYUdZ3yQkjSuaNxMn-zcT2U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "brand",
+									"value": "BeAT CBS",
+									"type": "text"
+								},
+								{
+									"key": "manufacturer",
+									"value": "Honda",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "17720000",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "Blue White",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2022",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "motorcycle",
+									"type": "text"
+								},
+								{
+									"key": "machine",
+									"value": "4 – Langkah, SOHC, eSP",
+									"type": "text"
+								},
+								{
+									"key": "suspension_front",
+									"value": "Teleskopik",
+									"type": "text"
+								},
+								{
+									"key": "suspension_back",
+									"value": "Lengan Ayun dengan Peredam Kejut Tunggal",
+									"type": "text"
+								},
+								{
+									"key": "transmission",
+									"value": "Otomatis, V-Matic",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/motor/store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"motor",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new car",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NzMxNzcwNTMsImV4cCI6MTY3MzE4MDY1MywibmJmIjoxNjczMTc3MDUzLCJqdGkiOiJXczNUa0ttUWg0T0l0S0Y5Iiwic3ViIjoiNjNiYWEzNGNhNGUwZDllMzlmMDY0ODgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.k14BEFsq3D8bvPR4Yo7dZYUdZ3yQkjSuaNxMn-zcT2U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "brand",
+									"value": "Hilux 2.8 GR-Sport",
+									"type": "text"
+								},
+								{
+									"key": "manufacturer",
+									"value": "Toyota",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "731400000",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "Silver",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2022",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "car",
+									"type": "text"
+								},
+								{
+									"key": "machine",
+									"value": "1 GD-FTV (HIGH)",
+									"type": "text"
+								},
+								{
+									"key": "passanger_number",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "style",
+									"value": "Sport Van",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/car/store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"car",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit motor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NzMxODA3MTMsImV4cCI6MTY3MzE4NDMxMywibmJmIjoxNjczMTgwNzEzLCJqdGkiOiJTWXBpanhRUzlrcU9qRDU0Iiwic3ViIjoiNjNiYWEzNGNhNGUwZDllMzlmMDY0ODgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.E2eJUySyRlP2oarHerr9mbN7I-CzzmJ4kUfd_bEoItk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "brand",
+									"value": "Vega ZR",
+									"type": "text"
+								},
+								{
+									"key": "manufacturer",
+									"value": "Yamaha",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "3300000",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "Blue",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2022",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "motorcycle",
+									"type": "text"
+								},
+								{
+									"key": "machine",
+									"value": "4-Langkah,",
+									"type": "text"
+								},
+								{
+									"key": "suspension_front",
+									"value": "Teleskopik",
+									"type": "text"
+								},
+								{
+									"key": "suspension_back",
+									"value": "Swing Arm dengan suspensi Tunggal",
+									"type": "text"
+								},
+								{
+									"key": "transmission",
+									"value": "Otomatis , V - Matic",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/motor/update/63ba348714e3a18aa6066662",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"motor",
+								"update",
+								"63ba348714e3a18aa6066662"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit car",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NzMxODA3MTMsImV4cCI6MTY3MzE4NDMxMywibmJmIjoxNjczMTgwNzEzLCJqdGkiOiJTWXBpanhRUzlrcU9qRDU0Iiwic3ViIjoiNjNiYWEzNGNhNGUwZDllMzlmMDY0ODgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.E2eJUySyRlP2oarHerr9mbN7I-CzzmJ4kUfd_bEoItk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "brand",
+									"value": "Kijang Innova 00",
+									"type": "text"
+								},
+								{
+									"key": "manufacturer",
+									"value": "Toyotal",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "397000000",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "Gray",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2022",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "car",
+									"type": "text"
+								},
+								{
+									"key": "machine",
+									"value": "2.0L Petrol Engine, In-Line 4 Cylinder 16 Valve",
+									"type": "text"
+								},
+								{
+									"key": "passanger_number",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "style",
+									"value": "Mini Van",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/car/update/63baaa583ef16190080777a3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"car",
+								"update",
+								"63baaa583ef16190080777a3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail of vehicle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NzMxNzcwNTMsImV4cCI6MTY3MzE4MDY1MywibmJmIjoxNjczMTc3MDUzLCJqdGkiOiJXczNUa0ttUWg0T0l0S0Y5Iiwic3ViIjoiNjNiYWEzNGNhNGUwZDllMzlmMDY0ODgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.k14BEFsq3D8bvPR4Yo7dZYUdZ3yQkjSuaNxMn-zcT2U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/63baa95e3ef16190080777a2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"63baa95e3ef16190080777a2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail of motors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NzMxNzcwNTMsImV4cCI6MTY3MzE4MDY1MywibmJmIjoxNjczMTc3MDUzLCJqdGkiOiJXczNUa0ttUWg0T0l0S0Y5Iiwic3ViIjoiNjNiYWEzNGNhNGUwZDllMzlmMDY0ODgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.k14BEFsq3D8bvPR4Yo7dZYUdZ3yQkjSuaNxMn-zcT2U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/motor/63baa95e3ef16190080777a2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"motor",
+								"63baa95e3ef16190080777a2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail of car",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NzMxNzcwNTMsImV4cCI6MTY3MzE4MDY1MywibmJmIjoxNjczMTc3MDUzLCJqdGkiOiJXczNUa0ttUWg0T0l0S0Y5Iiwic3ViIjoiNjNiYWEzNGNhNGUwZDllMzlmMDY0ODgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.k14BEFsq3D8bvPR4Yo7dZYUdZ3yQkjSuaNxMn-zcT2U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/car/63baabc23ef16190080777a4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"car",
+								"63baabc23ef16190080777a4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete vehicle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NzMxODA3MTMsImV4cCI6MTY3MzE4NDMxMywibmJmIjoxNjczMTgwNzEzLCJqdGkiOiJTWXBpanhRUzlrcU9qRDU0Iiwic3ViIjoiNjNiYWEzNGNhNGUwZDllMzlmMDY0ODgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.E2eJUySyRlP2oarHerr9mbN7I-CzzmJ4kUfd_bEoItk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/delete/63b903ec628ee2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"delete",
+								"63b903ec628ee2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete motor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NzMxNzcwNTMsImV4cCI6MTY3MzE4MDY1MywibmJmIjoxNjczMTc3MDUzLCJqdGkiOiJXczNUa0ttUWg0T0l0S0Y5Iiwic3ViIjoiNjNiYWEzNGNhNGUwZDllMzlmMDY0ODgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.k14BEFsq3D8bvPR4Yo7dZYUdZ3yQkjSuaNxMn-zcT2U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/motor/delete/63b918e3628ee2758e0a764",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"motor",
+								"delete",
+								"63b918e3628ee2758e0a764"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete car",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NzMxNzcwNTMsImV4cCI6MTY3MzE4MDY1MywibmJmIjoxNjczMTc3MDUzLCJqdGkiOiJXczNUa0ttUWg0T0l0S0Y5Iiwic3ViIjoiNjNiYWEzNGNhNGUwZDllMzlmMDY0ODgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.k14BEFsq3D8bvPR4Yo7dZYUdZ3yQkjSuaNxMn-zcT2U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vehicles/car/delete/63ba41b514e3a18aa606666",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"car",
+								"delete",
+								"63ba41b514e3a18aa606666"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Selling",
+			"item": [
+				{
+					"name": "See available products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NzMxNzcwNTMsImV4cCI6MTY3MzE4MDY1MywibmJmIjoxNjczMTc3MDUzLCJqdGkiOiJXczNUa0ttUWg0T0l0S0Y5Iiwic3ViIjoiNjNiYWEzNGNhNGUwZDllMzlmMDY0ODgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.k14BEFsq3D8bvPR4Yo7dZYUdZ3yQkjSuaNxMn-zcT2U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/selling/available",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"selling",
+								"available"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add selling",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NzMxNzcwNTMsImV4cCI6MTY3MzE4MDY1MywibmJmIjoxNjczMTc3MDUzLCJqdGkiOiJXczNUa0ttUWg0T0l0S0Y5Iiwic3ViIjoiNjNiYWEzNGNhNGUwZDllMzlmMDY0ODgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.k14BEFsq3D8bvPR4Yo7dZYUdZ3yQkjSuaNxMn-zcT2U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "vehicle_id",
+									"value": "63baabc23ef16190080777a4",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "payment_method",
+									"value": "Credit",
+									"type": "text"
+								},
+								{
+									"key": "tax",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "buyer_name",
+									"value": "Budi",
+									"type": "text"
+								},
+								{
+									"key": "buyer_address",
+									"value": "Pekerti",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/selling/store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"selling",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit selling",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NzMxODA3MTMsImV4cCI6MTY3MzE4NDMxMywibmJmIjoxNjczMTgwNzEzLCJqdGkiOiJTWXBpanhRUzlrcU9qRDU0Iiwic3ViIjoiNjNiYWEzNGNhNGUwZDllMzlmMDY0ODgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.E2eJUySyRlP2oarHerr9mbN7I-CzzmJ4kUfd_bEoItk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "vehicle_id",
+									"value": "63ba348714e3a18aa6066662",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "payment_method",
+									"value": "Cash",
+									"type": "text"
+								},
+								{
+									"key": "tax",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "buyer_name",
+									"value": "Alam",
+									"type": "text"
+								},
+								{
+									"key": "buyer_address",
+									"value": "Sutra",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/selling/edit/63ba6a9114e3a18aa6066",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"selling",
+								"edit",
+								"63ba6a9114e3a18aa6066"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "See all selling records",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NzMxNzcwNTMsImV4cCI6MTY3MzE4MDY1MywibmJmIjoxNjczMTc3MDUzLCJqdGkiOiJXczNUa0ttUWg0T0l0S0Y5Iiwic3ViIjoiNjNiYWEzNGNhNGUwZDllMzlmMDY0ODgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.k14BEFsq3D8bvPR4Yo7dZYUdZ3yQkjSuaNxMn-zcT2U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/selling",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"selling"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "See detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NzMxNzcwNTMsImV4cCI6MTY3MzE4MDY1MywibmJmIjoxNjczMTc3MDUzLCJqdGkiOiJXczNUa0ttUWg0T0l0S0Y5Iiwic3ViIjoiNjNiYWEzNGNhNGUwZDllMzlmMDY0ODgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.k14BEFsq3D8bvPR4Yo7dZYUdZ3yQkjSuaNxMn-zcT2U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/selling/63baada23ef16190080777a5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"selling",
+								"63baada23ef16190080777a5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete selling record",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NzMxODA3MTMsImV4cCI6MTY3MzE4NDMxMywibmJmIjoxNjczMTgwNzEzLCJqdGkiOiJTWXBpanhRUzlrcU9qRDU0Iiwic3ViIjoiNjNiYWEzNGNhNGUwZDllMzlmMDY0ODgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.E2eJUySyRlP2oarHerr9mbN7I-CzzmJ4kUfd_bEoItk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/selling/delete/63ba6a9114e3a18aa6066",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"selling",
+								"delete",
+								"63ba6a9114e3a18aa6066"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "See selling record for motorcycle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NzMxNzcwNTMsImV4cCI6MTY3MzE4MDY1MywibmJmIjoxNjczMTc3MDUzLCJqdGkiOiJXczNUa0ttUWg0T0l0S0Y5Iiwic3ViIjoiNjNiYWEzNGNhNGUwZDllMzlmMDY0ODgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.k14BEFsq3D8bvPR4Yo7dZYUdZ3yQkjSuaNxMn-zcT2U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/selling/motor",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"selling",
+								"motor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "See selling record for car",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NzMxODA3MTMsImV4cCI6MTY3MzE4NDMxMywibmJmIjoxNjczMTgwNzEzLCJqdGkiOiJTWXBpanhRUzlrcU9qRDU0Iiwic3ViIjoiNjNiYWEzNGNhNGUwZDllMzlmMDY0ODgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.E2eJUySyRlP2oarHerr9mbN7I-CzzmJ4kUfd_bEoItk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/selling/car",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"selling",
+								"car"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "bagas@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "bagas",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NzMxODE2NzcsImV4cCI6MTY3MzE4NTI3NywibmJmIjoxNjczMTgxNjc3LCJqdGkiOiJwWGhVSlJPajFjNDdWY3NCIiwic3ViIjoiNjNiYWEzNGNhNGUwZDllMzlmMDY0ODgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.X7FvZbZogARTsFk3nGPF6qi8VMsuBzGycm0L0qeJexc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "bagas@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "bagas",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/refresh",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NzMxODE3NjEsImV4cCI6MTY3MzE4NTM2MSwibmJmIjoxNjczMTgxNzYxLCJqdGkiOiI3R0lZMjlObTd3azJMWTduIiwic3ViIjoiNjNiYWEzNGNhNGUwZDllMzlmMDY0ODgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.sDP3wAn7PPPdSPw1cWLtC16UFXFoIb3BwD1uG8Mhpx4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "bagas@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "bagas",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/data",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVmcmVzaCIsImlhdCI6MTY3MzE4MTY3NywiZXhwIjoxNjczMTg1MjkwLCJuYmYiOjE2NzMxODE2OTAsImp0aSI6IjR0aldLV0NJWVZGWXAzelQiLCJzdWIiOiI2M2JhYTM0Y2E0ZTBkOWUzOWYwNjQ4ODIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.W9Qmi8ZGv41WkeAoRlhXvk4TA7TqHTqmusFMjKBJRFI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "bagas@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "bagas",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

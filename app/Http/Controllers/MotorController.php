@@ -83,8 +83,12 @@ class MotorController extends Controller
     */
     public function update(Request $request, $id)
     {
-        $this->vehicleController->checkAvailable($id);
-
+        $vehicle = $this->vehicleController->vehicleServ->getById($id);
+        if (!$vehicle)
+        {
+            return $this->vehicleController->responseMessage(false, 'Data not found', null, 201);
+        }
+        
         $req = (array) $request->all();
 
         try {

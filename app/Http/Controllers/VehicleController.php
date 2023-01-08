@@ -68,26 +68,17 @@ class VehicleController extends Controller
 
     /*
     *
-    * Check if given id exists
-    *
-    */
-    public function checkAvailable($id)
-    {
-        $vehicle = $this->vehicleServ->getById($id);
-        if (!$vehicle)
-        {
-            return $this->responseMessage(false, 'Data not found', null, 200);
-        }
-    }
-
-    /*
-    *
     * Delete record
     *
     */
     public function delete($id)
     {
-        $this->checkAvailable($id);
+        $vehicle = $this->vehicleServ->getById($id);
+        if (!$vehicle)
+        {
+            return $this->responseMessage(false, 'Data not found', null, 201);
+        }
+
         $this->vehicleServ->delete($id);
         return $this->responseMessage(true, 'Data of '.$id.' is deleted', null, 200);
     }
@@ -105,7 +96,7 @@ class VehicleController extends Controller
 
     /*
     *
-    * Add record
+    * Edit record
     * This section was emptied since each type of vehicles had their own input
     * Add and edit record code are written in Motor Class and Car Class
     *

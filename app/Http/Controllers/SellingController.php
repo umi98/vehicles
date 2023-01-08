@@ -59,7 +59,7 @@ class SellingController extends Controller
     public function getByCar()
     {
         $selling = $this->sellingServ->getByType('car');
-        return $this->responseMessage(true, 'List of motorcycle selling', $selling, 200);
+        return $this->responseMessage(true, 'List of car selling', $selling, 200);
     }
 
     /*
@@ -86,26 +86,17 @@ class SellingController extends Controller
 
     /*
     *
-    * Check if given id exists
-    *
-    */
-    public function checkAvailable($id)
-    {
-        $selling = $this->sellingServ->getById($id);
-        if (!$selling)
-        {
-            return $this->responseMessage(false, 'Data not found', null, 200);
-        }
-    }
-
-    /*
-    *
     * Delete record
     *
     */
     public function delete($id)
     {
-        $this->checkAvailable($id);
+        $selling = $this->sellingServ->getById($id);
+        if (!$selling)
+        {
+            return $this->responseMessage(false, 'Data not found', null, 201);
+        }
+
         $this->sellingServ->delete($id);
         return $this->responseMessage(true, 'Data of '.$id.' is deleted', null, 200);
     }
@@ -140,8 +131,12 @@ class SellingController extends Controller
     */
     public function update(Request $request, $id)
     {
-        $this->checkAvailable($id);
-
+        $selling = $this->sellingServ->getById($id);
+        if (!$selling)
+        {
+            return $this->responseMessage(false, 'Data not found', null, 201);
+        }
+        
         $req = (array) $request->all();
 
         try {

@@ -17,7 +17,7 @@ class CarRepository
 		$detail = [
 			'machine' => $data['machine'],            
             'passanger_number' => $data['passanger_number'],
-            'type' => $data['type'],
+            'style' => $data['style'],
 		];
 
 		$car->brand = $data['brand'];
