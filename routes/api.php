@@ -21,13 +21,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::group([
     'prefix' => 'auth'
 ], function(){
-    Route::post('login', 'App\Http\Controllers\AuthController@login');
+    Route::post('login', 'App\Http\Controllers\AuthController@login')->name('api.login');
     Route::group([
         'middleware' => 'auth:api'
     ], function(){
-        Route::post('logout', 'App\Http\Controllers\AuthController@logout');
-        Route::post('refresh', 'App\Http\Controllers\AuthController@refresh');
-        Route::get('data', 'App\Http\Controllers\AuthController@data');
+        Route::post('logout', 'App\Http\Controllers\AuthController@logout')->name('api.logout');
+        Route::post('refresh', 'App\Http\Controllers\AuthController@refresh')->name('api.refresh');
+        Route::get('data', 'App\Http\Controllers\AuthController@data')->name('api.data');
     });
 });
 
@@ -40,24 +40,24 @@ Route::group([
         Route::group([
             'prefix' => 'motor'
         ], function(){
-            Route::get('/', 'App\Http\Controllers\MotorController@getMotor');
-            Route::post('/store', 'App\Http\Controllers\MotorController@addMotor');
-            Route::post('/update/{id}', 'App\Http\Controllers\MotorController@update');
-            Route::get('/{id}', 'App\Http\Controllers\MotorController@getById');
-            Route::delete('/delete/{id}', 'App\Http\Controllers\MotorController@delete');
+            Route::get('/', 'App\Http\Controllers\MotorController@getMotor')->name('motor.show');
+            Route::post('/store', 'App\Http\Controllers\MotorController@addMotor')->name('motor.store');
+            Route::post('/update/{id}', 'App\Http\Controllers\MotorController@update')->name('motor.update');
+            Route::get('/{id}', 'App\Http\Controllers\MotorController@getById')->name('motor.detail');
+            Route::delete('/delete/{id}', 'App\Http\Controllers\MotorController@delete')->name('motor.delete');
         });
         Route::group([
             'prefix' => 'car'
         ], function(){
-            Route::get('/', 'App\Http\Controllers\CarController@getCar');
-            Route::post('/store', 'App\Http\Controllers\CarController@addCar');
-            Route::post('/update/{id}', 'App\Http\Controllers\CarController@update');
-            Route::get('/{id}', 'App\Http\Controllers\CarController@getById');
-            Route::delete('/delete/{id}', 'App\Http\Controllers\CarController@delete');
+            Route::get('/', 'App\Http\Controllers\CarController@getCar')->name('car.show');
+            Route::post('/store', 'App\Http\Controllers\CarController@addCar')->name('car.store');
+            Route::post('/update/{id}', 'App\Http\Controllers\CarController@update')->name('car.update');
+            Route::get('/{id}', 'App\Http\Controllers\CarController@getById')->name('car.detail');
+            Route::delete('/delete/{id}', 'App\Http\Controllers\CarController@delete')->name('car.delete');
         });
-        Route::get('/', 'App\Http\Controllers\VehicleController@showAll');
-        Route::delete('/delete/{id}', 'App\Http\Controllers\VehicleController@delete');
-        Route::get('/{id}', 'App\Http\Controllers\VehicleController@getById');        
+        Route::get('/', 'App\Http\Controllers\VehicleController@showAll')->name('vehicle.show');
+        Route::delete('/delete/{id}', 'App\Http\Controllers\VehicleController@delete')->name('vehicle.delete');
+        Route::get('/{id}', 'App\Http\Controllers\VehicleController@getById')->name('vehicle.detail');        
     });
 });
 
@@ -67,13 +67,13 @@ Route::group([
     Route::group([
         'middleware' => 'auth:api'
     ], function(){
-        Route::get('/', 'App\Http\Controllers\SellingController@showAll');
-        Route::get('/motor', 'App\Http\Controllers\SellingController@getByMotor');
-        Route::get('/car', 'App\Http\Controllers\SellingController@getByCar');
-        Route::get('/available','App\Http\Controllers\SellingController@getStock');
-        Route::post('/store', 'App\Http\Controllers\SellingController@store');
-        Route::post('/edit/{id}', 'App\Http\Controllers\SellingController@update');
-        Route::delete('/delete/{id}', 'App\Http\Controllers\SellingController@delete');
-        Route::get('/{id}', 'App\Http\Controllers\SellingController@getById');
+        Route::get('/', 'App\Http\Controllers\SellingController@showAll')->name('selling.show');
+        Route::get('/motor', 'App\Http\Controllers\SellingController@getByMotor')->name('selling.motor');
+        Route::get('/car', 'App\Http\Controllers\SellingController@getByCar')->name('selling.car');
+        Route::get('/available','App\Http\Controllers\SellingController@getStock')->name('selling.available');
+        Route::post('/store', 'App\Http\Controllers\SellingController@store')->name('selling.store');
+        Route::post('/edit/{id}', 'App\Http\Controllers\SellingController@update')->name('selling.update');
+        Route::delete('/delete/{id}', 'App\Http\Controllers\SellingController@delete')->name('selling.delete');
+        Route::get('/{id}', 'App\Http\Controllers\SellingController@getById')->name('selling.detail');
     });
 });
